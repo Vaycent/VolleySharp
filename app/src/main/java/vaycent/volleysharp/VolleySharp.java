@@ -20,7 +20,7 @@ public class VolleySharp {
 
 
 
-    VolleySharp(Context context){
+    public VolleySharp(Context context){
         mQueue = Volley.newRequestQueue(context, new OkHttpStack());
         mQueue.start();
     }
