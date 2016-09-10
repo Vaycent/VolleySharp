@@ -5,7 +5,7 @@ import android.app.Application;
 /**
  * Created by Vaycent on 16/9/5.
  */
-public class ApplicationContext extends Application {
+public class VolleySharpApplication extends Application {
     public VolleySharp volleySharp;
 
     @Override
