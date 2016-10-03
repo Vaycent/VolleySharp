@@ -4,6 +4,21 @@ This is the volley with okhttp as its underlying frame, and makes the volley mor
 
 
 ## How to Use
+```gradle
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    compile 'com.github.Vaycent:volleysharp:1.5.0'
+}
+
+```
+First, import this dependence
+
 
 ```java
 VolleySharp volleySharp = new VolleySharp(this);
