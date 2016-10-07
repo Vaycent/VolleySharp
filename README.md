@@ -4,6 +4,9 @@ This is the volley with okhttp as its underlying frame, and makes the volley mor
 
 
 ## How to Use
+
+First, import this dependence
+
 ```gradle
 allprojects {
     repositories {
@@ -17,13 +20,14 @@ dependencies {
 }
 
 ```
-First, import this dependence
 
+New a VolleySharp object in your project. Be noticed, please instance only one VolleySharp object in the whole project, for example, you can new this VolleySharp object in Application.
 
 ```java
 VolleySharp volleySharp = new VolleySharp(this);
 ```
-New a VolleySharp object in your project. Be noticed, please instance only one VolleySharp object in the whole project, for example, you can new this VolleySharp object in Application.
+
+This function can help you to implement the http get request
 
 
 ```java
@@ -46,8 +50,7 @@ volleySharp.startGetRequest(link,listenerInterface);
 
 ```
 
-This function can help you to implement the http get request
-
+This function can help you to implement the http post request
 
 ```java
  StringListenerInterface listenerInterface;
@@ -75,8 +78,7 @@ volleySharp.startPostRequest(link,listenerInterface,map);
 
 ```
 
-This function can help you to implement the http post request
-
+This function can help you to implement the http json request
 
 ```java
  JsonListenerInterface listenerInterface;
@@ -98,7 +100,6 @@ String link="http://gc.ditu.aliyun.com/geocoding?a=%E5%B9%BF%E5%B7%9E%E5%B8%82";
 volleySharp.startJsonRequest(link,listenerInterface);
 ```
 
-This function can help you to implement the http json request
 
 
 
