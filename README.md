@@ -16,7 +16,7 @@ allprojects {
 }
 
 dependencies {
-    compile 'com.github.Vaycent:volleysharp:1.5.0'
+    compile 'com.github.Vaycent:volleysharp:1.5.1'
 }
 
 ```
