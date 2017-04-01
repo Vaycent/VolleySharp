@@ -12,8 +12,8 @@ import org.json.JSONObject;
  */
 public abstract class JsonListenerInterface {
     public Context context;
-    public static Response.Listener<JSONObject> responseListener;
-    public static Response.ErrorListener errorListener;
+    public Response.Listener<JSONObject> responseListener;
+    public Response.ErrorListener errorListener;
 
     public JsonListenerInterface(Context mContext, Response.Listener<JSONObject> mListener, Response.ErrorListener mErrorListener) {
         this.context = mContext;

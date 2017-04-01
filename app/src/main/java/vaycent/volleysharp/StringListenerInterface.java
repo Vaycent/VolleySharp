@@ -10,8 +10,8 @@ import com.android.volley.VolleyError;
  */
 public abstract class StringListenerInterface {
     public Context context;
-    public static Response.Listener<String> responseListener;
-    public static Response.ErrorListener errorListener;
+    public Response.Listener<String> responseListener;
+    public Response.ErrorListener errorListener;
 
     public StringListenerInterface(Context mContext, Response.Listener<String> mListener, Response.ErrorListener mErrorListener) {
         this.context = mContext;
