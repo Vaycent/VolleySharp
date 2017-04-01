@@ -15,10 +15,10 @@ public abstract class JsonListenerInterface {
     public Response.Listener<JSONObject> responseListener;
     public Response.ErrorListener errorListener;
 
-    public JsonListenerInterface(Context mContext, Response.Listener<JSONObject> mListener, Response.ErrorListener mErrorListener) {
+    public JsonListenerInterface(Context mContext) {//, Response.Listener<JSONObject> mListener, Response.ErrorListener mErrorListener
         this.context = mContext;
-        this.responseListener=mListener;
-        this.errorListener=mErrorListener;
+//        this.responseListener=mListener;
+//        this.errorListener=mErrorListener;
     }
 
 
