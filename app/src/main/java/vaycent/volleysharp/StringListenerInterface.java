@@ -13,10 +13,10 @@ public abstract class StringListenerInterface {
     public Response.Listener<String> responseListener;
     public Response.ErrorListener errorListener;
 
-    public StringListenerInterface(Context mContext, Response.Listener<String> mListener, Response.ErrorListener mErrorListener) {
+    public StringListenerInterface(Context mContext) {
         this.context = mContext;
-        this.responseListener=mListener;
-        this.errorListener=mErrorListener;
+//        this.responseListener=mListener;
+//        this.errorListener=mErrorListener;
     }
 
 
