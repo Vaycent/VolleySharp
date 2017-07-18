@@ -18,24 +18,21 @@ public abstract class StringListenerInterface {
     public abstract void errorAction(VolleyError error);
 
 
-    public Response.Listener<String> getResponseListener(){
-        responseListener=new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                responseAction(response);
-            }
-        };
-        return responseListener;
-    }
+    public abstract Response.Listener<String> getResponseListener();
+//    responseListener=new Response.Listener<String>() {
+//        @Override
+//        public void onResponse(String response) {
+//            responseAction(response);
+//        }
+//    };
+//        return responseListener;
 
-
-    public Response.ErrorListener getErrorListener(){
-        errorListener=new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                errorAction(error);
-            }
-        };
-        return errorListener;
-    }
+    public abstract Response.ErrorListener getErrorListener();
+//    errorListener=new Response.ErrorListener() {
+//        @Override
+//        public void onErrorResponse(VolleyError error) {
+//            errorAction(error);
+//        }
+//    };
+//        return errorListener;
 }
