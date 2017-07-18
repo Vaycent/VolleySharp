@@ -1,7 +1,5 @@
 package vaycent.volleysharp;
 
-import android.content.Context;
-
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
@@ -11,12 +9,10 @@ import org.json.JSONObject;
  * Created by Vaycent on 16/9/5.
  */
 public abstract class JsonListenerInterface {
-    public Context context;
     public Response.Listener<JSONObject> responseListener;
     public Response.ErrorListener errorListener;
 
-    public JsonListenerInterface(Context mContext) {//, Response.Listener<JSONObject> mListener, Response.ErrorListener mErrorListener
-        this.context = mContext;
+    public JsonListenerInterface() {//, Response.Listener<JSONObject> mListener, Response.ErrorListener mErrorListener
 //        this.responseListener=mListener;
 //        this.errorListener=mErrorListener;
     }
