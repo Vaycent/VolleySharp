@@ -21,25 +21,4 @@ public abstract class JsonListenerInterface {
     public abstract void responseAction(String result);
     public abstract void errorAction(VolleyError error);
 
-
-    public Response.Listener<JSONObject> getResponseListener(){
-        responseListener=new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                responseAction(response.toString());
-            }
-        };
-        return responseListener;
-    }
-
-
-    public Response.ErrorListener getErrorListener(){
-        errorListener=new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                errorAction(error);
-            }
-        };
-        return errorListener;
-    }
 }

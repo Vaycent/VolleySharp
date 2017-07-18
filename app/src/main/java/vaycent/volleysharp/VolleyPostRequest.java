@@ -22,8 +22,8 @@ public class VolleyPostRequest {
 
     public VolleyPostRequest(String link, StringListenerInterface listenerInterface, Map<String, String> map, RequestQueue mQueue) {
         this.link=link;
-        this.responseListener=listenerInterface.getResponseListener();
-        this.errorListener=listenerInterface.getErrorListener();
+        this.responseListener=listenerInterface.responseListener;
+        this.errorListener=listenerInterface.errorListener;
         this.mQueue=mQueue;
         this.map=map;
         start();

@@ -18,8 +18,8 @@ public class VolleyGetRequest {
 
     public VolleyGetRequest(String link, StringListenerInterface listenerInterface, RequestQueue mQueue) {
         this.link=link;
-        this.responseListener=listenerInterface.getResponseListener();
-        this.errorListener=listenerInterface.getErrorListener();
+        this.responseListener=listenerInterface.responseListener;
+        this.errorListener=listenerInterface.errorListener;
         this.mQueue=mQueue;
 
         start();
