@@ -1,7 +1,5 @@
 package vaycent.volleysharp;
 
-import android.content.Context;
-
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
@@ -9,12 +7,10 @@ import com.android.volley.VolleyError;
  * Created by Vaycent on 16/9/5.
  */
 public abstract class StringListenerInterface {
-    public Context context;
     public Response.Listener<String> responseListener;
     public Response.ErrorListener errorListener;
 
-    public StringListenerInterface(Context mContext) {
-        this.context = mContext;
+    public StringListenerInterface() {
 //        this.responseListener=mListener;
 //        this.errorListener=mErrorListener;
     }
