@@ -27,6 +27,8 @@ public class VolleyPostRequest {
         this.mQueue=mQueue;
         this.map=map;
         start();
+        responseListener = null;
+        errorListener = null;
         listenerInterface = null;
     }
 
