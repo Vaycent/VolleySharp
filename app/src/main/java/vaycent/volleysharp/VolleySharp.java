@@ -26,7 +26,7 @@ public class VolleySharp {
         mQueue.start();
     }
 
-    public void startGetRequest(String link, listenerInterface){
+    public void startGetRequest(String link,StringListenerInterface listenerInterface){
         vGetRequest= new WeakReference<>(new VolleyGetRequest(link,listenerInterface,mQueue));
     }
 
