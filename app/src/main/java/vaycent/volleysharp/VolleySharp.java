@@ -5,6 +5,7 @@ import android.content.Context;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+import java.lang.ref.WeakReference;
 import java.util.Map;
 
 /**
@@ -14,9 +15,9 @@ public class VolleySharp {
 
     private RequestQueue mQueue;
 
-    private VolleyGetRequest vGetRequest;
-    private VolleyPostRequest vPostRequest;
-    private VolleyJsonRequest vJsonRequest;
+    private WeakReference<VolleyGetRequest> vGetRequest;
+    private WeakReference<VolleyPostRequest> vPostRequest;
+    private WeakReference<VolleyJsonRequest> vJsonRequest;
 
 
 
@@ -26,15 +27,15 @@ public class VolleySharp {
     }
 
     public void startGetRequest(String link,StringListenerInterface listenerInterface){
-        vGetRequest=new VolleyGetRequest(link,listenerInterface,mQueue);
+        vGetRequest= new WeakReference<>(new VolleyGetRequest(link,listenerInterface,mQueue));
     }
 
     public void startPostRequest(String link, StringListenerInterface listenerInterface, Map<String, String> map){
-        vPostRequest=new VolleyPostRequest(link,listenerInterface,map,mQueue);
+        vPostRequest = new WeakReference<>(new VolleyPostRequest(link,listenerInterface,map,mQueue));
     }
 
     public void startJsonRequest(String link,JsonListenerInterface listenerInterface){
-        vJsonRequest=new VolleyJsonRequest(link,listenerInterface,mQueue);
+        vJsonRequest = new WeakReference<>(new VolleyJsonRequest(link,listenerInterface,mQueue));
     }
 
 
