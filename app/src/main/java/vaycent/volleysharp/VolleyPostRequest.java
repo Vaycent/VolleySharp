@@ -26,8 +26,8 @@ public class VolleyPostRequest {
         this.errorListener=listenerInterface.getErrorListener();
         this.mQueue=mQueue;
         this.map=map;
-
         start();
+        listenerInterface = null;
     }
 
     public void start(){
@@ -35,20 +35,7 @@ public class VolleyPostRequest {
                 responseListener, errorListener){
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<String, String>();
-//
-//                params=map;
-//                System.out.println("params:"+params.get("action")+"");
-//                System.out.println("params:"+params.get("period")+"");
-//                System.out.println("params:"+params.get("lang")+"");
-
-//                Map<String, String> map = new HashMap<String, String>();
-//                map.put("action", "R");
-//                map.put("period", "360");
                 return map;
-
-
-//                return params;
             }
         };
 

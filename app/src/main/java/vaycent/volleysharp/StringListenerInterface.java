@@ -11,8 +11,6 @@ public abstract class StringListenerInterface {
     public Response.ErrorListener errorListener;
 
     public StringListenerInterface() {
-//        this.responseListener=mListener;
-//        this.errorListener=mErrorListener;
     }
 
 
